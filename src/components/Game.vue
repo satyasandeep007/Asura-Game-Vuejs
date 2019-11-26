@@ -30,15 +30,16 @@
     </section>
     <section class="row controls" v-if="!gameIsRunning">
       <div class="small-12 columns">
-        <button id="start-game" @click="startGame">START NEW GAME</button>
+        <button id="start-game" @click="startGame" type="button" class="btn btn-success">START NEW GAME</button>
       </div>
     </section>
     <section class="row controls" v-else>
       <div class="small-12 columns">
-        <button id="attack" @click="attack">ATTACK</button>
-        <button id="special-attack" @click="specialAttack">SPECIAL ATTACK</button>
-        <button id="heal" @click="heal">HEAL</button>
-        <button id="give-up" @click="giveUp">GIVE UP</button>
+        <button id="attack" @click="attack" type="button" class="btn btn-primary">ATTACK</button>
+        
+        <button id="special-attack" @click="specialAttack" type="button" class="btn btn-info">SPECIAL ATTACK</button>
+        <button id="heal" @click="heal" type="button" class="btn btn-warning" >HEAL</button>
+        <button id="give-up" @click="giveUp" type="button" class="btn btn-danger">GIVE UP</button>
       </div>
     </section>
     <!-- <section class="row log" v-if="turns.length > 0">
@@ -189,40 +190,9 @@ export default {
 
 button {
   font-size: 20px;
-  background-color: #eee;
+  
   padding: 12px;
-  box-shadow: 0 1px 1px black;
   margin: 10px;
-}
-#start-game {
-  background-color: #aaffb0;
-}
-#start-game:hover {
-  background-color: #76ff7e;
-}
-#attack {
-  background-color: #ff7367;
-}
-#attack:hover {
-  background-color: #ff3f43;
-}
-#special-attack {
-  background-color: #ffaf4f;
-}
-#special-attack:hover {
-  background-color: #ff9a2b;
-}
-#heal {
-  background-color: #aaffb0;
-}
-#heal:hover {
-  background-color: #76ff7e;
-}
-#give-up {
-  background-color: #ffffff;
-}
-#give-up:hover {
-  background-color: #c7c7c7;
 }
 .players{
     display: flex;
